@@ -52,7 +52,7 @@ body{
         display: flex;
         height: 25%;
         max-height: 170px;
-        width: 35%;
+        min-width: 35%;
         flex-direction: column;
         justify-content: space-around;
         align-items: start;
@@ -155,4 +155,43 @@ body{
             }
         }
     }
+}
+@media screen and (max-width: 324px) {
+    .container {
+    flex-direction: column;
+    align-items: stretch;
+    margin: 1rem;
+  }
+
+  .iconContainer {
+    min-width: 100%;
+    border-radius: 1rem;
+    align-items: center;
+  }
+
+  .rightContainer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .dataContainer {
+    width: 100%;
+  }
+
+  .bubble {
+    height: 100vh;
+    width: 100vw;
+    margin: 0 auto 1rem auto;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 1rem;
+    position: fixed;
+    bottom: -8rem;
+    // left: 50%;
+  }
+  .bubble::after {
+    display: none;
+    visibility: none;
+    border-radius: 1rem;
+  }
 }
