@@ -1,0 +1,7 @@
+body {
+  background-image: url("/images/bg-desktop.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center bottom;
+  height: 100vh;
+}

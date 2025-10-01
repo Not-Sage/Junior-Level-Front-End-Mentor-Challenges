@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: hsl(229, 57%, 11%);
+  font-family: "Raleway", sans-serif;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 98%;
+  gap: 1rem;
+}
+.container .iconContainer {
+  display: flex;
+  height: 25%;
+  max-height: 170px;
+  min-width: 20%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+  border-radius: 0.5rem 5rem 1rem 1rem;
+  background-color: hsl(228, 56%, 26%);
+  padding: 1rem 2rem;
+}
+.container .iconContainer .icons {
+  width: 100%;
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+.container .iconContainer .icons .icon {
+  background-color: hsl(229, 57%, 11%);
+  border-radius: 0.5rem;
+  padding: 0.5rem;
+  display: grid;
+  place-items: center;
+}
+.container .rightContainer {
+  display: flex;
+  height: 25%;
+  max-height: 170px;
+  width: 35%;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: start;
+}
+.container .rightContainer .blank {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+}
+.container .bubble {
+  height: 400%;
+  position: relative;
+  margin-right: 1rem;
+  background: white;
+  padding: 1rem 2rem;
+  border-radius: 1rem 1rem 2px 1rem;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  display: inline-block;
+  z-index: 10;
+}
+.container .bubble::after {
+  content: "";
+  position: absolute;
+  bottom: 0; /* move under the box */
+  left: 87.5%; /* center it horizontally */
+  transform: translateX(-50%);
+  border-width: 12px 10px 0 10px; /* triangle size */
+  border-style: solid;
+  border-color: white transparent transparent transparent;
+  scale: 2;
+  transform: rotate(90deg);
+}
+.container .big {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+}
+.container .dataContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 80%;
+  width: 100%;
+  background-color: hsl(228, 56%, 26%);
+  border-radius: 0.8rem;
+  position: relative;
+  right: 100;
+  padding: 1rem;
+}
+.container .dataContainer h3 {
+  color: hsl(243, 100%, 93%);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+.container .dataContainer h3 span {
+  color: white;
+}
+.container .dataContainer .level {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.container .dataContainer .level span {
+  color: hsl(229, 7%, 55%);
+  font-size: 0.8rem;
+}
+.container .dataContainer .bar {
+  width: 100%;
+  height: 1rem;
+  border-radius: 2rem;
+  background-color: hsl(229, 57%, 11%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.container .dataContainer .bar .line {
+  width: 70%;
+  height: 80%;
+  background-image: linear-gradient(hsl(6, 100%, 80%), hsl(335, 100%, 65%));
+  border-radius: 2rem;
+  z-index: 100;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  right: -0.1rem;
+}
+.container .dataContainer .bar .line .dot {
+  position: relative;
+  right: 0.1rem;
+  height: 0.5rem;
+  width: 0.5rem;
+  background-color: white;
+  border-radius: 50%;
+}/*# sourceMappingURL=style.this.css.map */
