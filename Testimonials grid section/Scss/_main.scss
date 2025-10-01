@@ -1,0 +1,117 @@
+.grid {
+  display: grid;
+  grid-template-areas:
+    "dave dave john kira"
+    "jean pat pat kira";
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 1rem;
+}
+
+.dave { grid-area: dave; background: $purple-500; }
+.john { grid-area: john; background: $grey-500; }
+.kira { grid-area: kira; background: white; }
+.jean { grid-area: jean; background: white; }
+.pat { grid-area: pat; background: #18202d; }
+
+.grid{
+    max-width: 1400px;
+    width: 98%;
+    margin: 1rem auto;
+    gap: 1rem;
+}
+.char{
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.titleContainer{
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    img{
+        border-radius: 50%;
+        outline: 2px solid $grey-100;
+        cursor: pointer;
+    }
+    .data{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        min-width: 9rem;
+        gap: 0.4rem;
+    }
+    h2{
+        color: white;
+        font-weight: 600;
+        padding: 0;
+    }
+    p{
+        color: $grey-200;
+    }
+}
+h2{
+    color: $grey-100;
+    padding: 0.8rem 0;
+    font-weight: 600;
+    font-size: 1.6rem;
+}
+h3{
+    color: $grey-200;
+    font-weight: 400;
+}
+.black{
+    .titleContainer{
+            h2{
+                color: black;
+            }
+            p{
+                color: $grey-500;
+            }
+    }
+    h2{
+        color: $dark-blue;
+    }
+    h3{
+        color: $grey-500;
+    }
+}
+
+.dave{
+    background-image: url("/images/bg-pattern-quotation.svg");
+    background-repeat: no-repeat;
+    background-position: top 0rem right 5rem;
+    background-size: 8rem;
+}
+
+@media screen and (max-width: 768px) {
+    .grid {
+        grid-template-areas:
+            "dave"
+            "john"
+            "jean"
+            "pat"
+            "kira";
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(5, auto);
+        // scale: 0.9;
+        margin: 0;
+        margin: 0.5rem auto;
+        h2{
+            font-size: 1.2rem;
+        }
+        h3{
+            font-size: 0.9rem;
+            line-height: 1.2rem;
+        }
+        gap: 2rem;
+    }
+    .dave{
+        background-image: url("");
+    }
+    
+}
+
