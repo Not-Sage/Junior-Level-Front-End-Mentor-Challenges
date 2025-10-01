@@ -6,5 +6,297 @@ $yellow-100: hsl(31, 66%, 93%);
 $yellow-500: hsl(39, 100%, 71%);
 $white: hsl(0, 0%, 100%);
 $black: hsl(0, 0%, 7%);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family;
+}
+img{
+    height: 4rem;
+}
+.container{
+    margin: 0 auto;
+    padding: 2rem;
+    height: auto;
+    width: 98%;
+    max-width: 1400px;
+    background-color: #f5f5f5;
+    display: flex;
+    .left{
+        display: flex;
+        width: 25%;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 1.5rem;
+        margin-right: 1.5rem;
+        .create, .write{
+            flex-grow: 1;
+            border-radius: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 2rem;
+        }
+        .create{
+            background-color: $yellow-100;
+            padding: 3rem;
+            h1{
+                font-weight: 400;
+                font-family: $font-family;
+                line-height: 2rem;
+                font-size: 2.4rem;
+                span{
+                    color: $purple-500;
+                    font-style: italic;
+                }
+            }
+            img{
+                height: 6rem;
+            }
+        }
+        .write{
+            background-color: $yellow-500;
+            padding: 1rem 2rem;
+            h1{
+                font-weight: 400;
+                line-height: 2rem;
+                font-size: 2.4rem;
+            }
+            img{
+                height: 14rem;
+            }
+        }
+    }
+    .grid{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 1.5rem;
+        grid-template-areas: 
+        "social social schedule"
+        "manage maintain schedule"
+        "growth follower follower";
+    }
+    .card{
+        padding: 2rem;
+        border-radius: 0.5rem;
+    }
+    .hero     { 
+        grid-area: social;     
+        background: #8B5CF6;   
+        color: white; 
+        background-color: $purple-500;
+        text-align: center;
+        padding: 2rem;
+        h1{
+            font-size: 4rem;
+            line-height: 3.5rem;
+            font-weight: 400;
+            .orange{
+                color: $yellow-500;
+            }
+        }
+        img{
+            height: 2rem;
+        }
+        h4{
+            font-weight: 400;
+            color: $purple-100;
+        }
+    }
+    .schedule { 
+        grid-area: schedule; 
+        background: $purple-100;
+        padding: 2rem;
+        h1{
+            font-weight: 600;
+        }
+        img{
+            height: 14rem;
+            overflow: hidden;
+            margin: 2rem 0;
+        }
+        h2{
+            font-weight: 400;
+            font-size: 1.2rem;
+        }
+    }
+    .manage   { 
+        grid-area: manage;   
+        background: #fff;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        h1{
+            font-weight: 400;
+            font-size: 2.2rem;
+            line-height: 2rem;
+        }
+    }    
+    .posting  { 
+        grid-area: maintain;  
+        background: $yellow-500;   
+        h2{
+            font-size: 2rem;
+            line-height: 1.5rem;
+            font-weight: 400;
+            margin: 1rem 0;
+        }
+        img{
+            height: 8rem;
+        }
+    }
+    .growth   { 
+        grid-area: growth;   
+        background: #fff;   
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        padding: 1rem;
+        h1{
+            font-size: 4rem;
+        }
+        h3{
+            font-weight: 400;
+        }
+    }
+    .followers{ 
+        grid-area: follower; 
+        background: $purple-500;   
+        color: white; 
+        display: flex;
+        padding: 1rem;
+        gap: 1rem;
+        align-items: center;
+        h1{
+            font-size: 2.2rem;
+        }
+        img{
+            height: 12rem;
+        }
+    }
+}
 
+@media (max-width: 768px) {
+    .container{
+        flex-direction: column;
+        .left{
+            min-width: 100vw;
+            div{
+                min-width: 100%;
+            }
+        }
+    }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "hero"
+      "schedule"
+      "manage"
+      "posting"
+      "growth"
+      "followers";
+  }
+}
 
+/* Mobile (iPhone 8 / 375px) specific adjustments */
+@media (max-width: 375px) {
+    /* make container a centered column so we can reorder items visually */
+    .container{
+        padding: 1rem;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        .left{
+            width: 100%;
+            max-width: 360px;
+            margin: 0 auto;
+            order: 2; /* place left column after the grid */
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            .create, .write{
+                padding: 1.2rem;
+                border-radius: 0.75rem;
+                width: 100%;
+            }
+            .create{
+                padding: 1.5rem;
+                h1{ font-size: 1.6rem; line-height: 1.8rem; }
+                img{ height: 4.5rem; }
+            }
+            .write{
+                padding: 0.9rem 1rem;
+                h1{ font-size: 1.6rem; }
+                img{ height: 8rem; }
+            }
+        }
+    }
+
+    .grid{
+        order: 1; /* visual order: grid content first */
+        width: 100%;
+        max-width: 360px;
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        grid-template-areas:
+            "hero"
+            "schedule"
+            "manage"
+            "posting"
+            "growth"
+            "followers";
+        margin: 0 auto;
+    }
+
+    .card{ padding: 1rem; border-radius: 0.75rem; }
+
+    /* larger hero section at the top to match mockup */
+    .hero{
+        padding: 1.4rem;
+        border-radius: 0.75rem;
+        h1{ font-size: 2.4rem; line-height: 2.6rem; }
+        h4{ font-size: 0.95rem; }
+        img{ height: 2rem; }
+    }
+
+    .schedule{
+        padding: 1rem;
+        img{ height: 9rem; margin: 1rem 0; }
+        h2{ font-size: 1rem; }
+    }
+
+    .manage{
+        padding: 1rem;
+        h1{ font-size: 1.05rem; }
+        img{ height: 3.5rem; }
+    }
+
+    .posting{
+        padding: 1rem;
+        h2{ font-size: 1.2rem; }
+        img{ height: 6.5rem; }
+    }
+
+    .growth{
+        padding: 1rem;
+        h1{ font-size: 2rem; }
+        img{ max-width: 100%; height: auto; }
+    }
+
+    .followers{
+        padding: 1rem;
+        h1{ font-size: 1.2rem; }
+        img{ height: 7.5rem; }
+    }
+
+    /* Ensure images don't overflow small screens */
+    img{ max-width: 100%; height: auto; }
+}

@@ -1,1 +1,316 @@
-@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");/*# sourceMappingURL=style.this.css.map */
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+}
+
+img {
+  height: 4rem;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 2rem;
+  height: auto;
+  width: 98%;
+  max-width: 1400px;
+  background-color: #f5f5f5;
+  display: flex;
+}
+.container .left {
+  display: flex;
+  width: 25%;
+  height: auto;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  margin-right: 1.5rem;
+}
+.container .left .create, .container .left .write {
+  flex-grow: 1;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}
+.container .left .create {
+  background-color: hsl(31, 66%, 93%);
+  padding: 3rem;
+}
+.container .left .create h1 {
+  font-weight: 400;
+  font-family: "DM Sans", sans-serif;
+  line-height: 2rem;
+  font-size: 2.4rem;
+}
+.container .left .create h1 span {
+  color: hsl(256, 67%, 59%);
+  font-style: italic;
+}
+.container .left .create img {
+  height: 6rem;
+}
+.container .left .write {
+  background-color: hsl(39, 100%, 71%);
+  padding: 1rem 2rem;
+}
+.container .left .write h1 {
+  font-weight: 400;
+  line-height: 2rem;
+  font-size: 2.4rem;
+}
+.container .left .write img {
+  height: 14rem;
+}
+.container .grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  grid-template-areas: "social social schedule" "manage maintain schedule" "growth follower follower";
+}
+.container .card {
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.container .hero {
+  grid-area: social;
+  background: #8B5CF6;
+  color: white;
+  background-color: hsl(256, 67%, 59%);
+  text-align: center;
+  padding: 2rem;
+}
+.container .hero h1 {
+  font-size: 4rem;
+  line-height: 3.5rem;
+  font-weight: 400;
+}
+.container .hero h1 .orange {
+  color: hsl(39, 100%, 71%);
+}
+.container .hero img {
+  height: 2rem;
+}
+.container .hero h4 {
+  font-weight: 400;
+  color: hsl(254, 88%, 90%);
+}
+.container .schedule {
+  grid-area: schedule;
+  background: hsl(254, 88%, 90%);
+  padding: 2rem;
+}
+.container .schedule h1 {
+  font-weight: 600;
+}
+.container .schedule img {
+  height: 14rem;
+  overflow: hidden;
+  margin: 2rem 0;
+}
+.container .schedule h2 {
+  font-weight: 400;
+  font-size: 1.2rem;
+}
+.container .manage {
+  grid-area: manage;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+.container .manage h1 {
+  font-weight: 400;
+  font-size: 2.2rem;
+  line-height: 2rem;
+}
+.container .posting {
+  grid-area: maintain;
+  background: hsl(39, 100%, 71%);
+}
+.container .posting h2 {
+  font-size: 2rem;
+  line-height: 1.5rem;
+  font-weight: 400;
+  margin: 1rem 0;
+}
+.container .posting img {
+  height: 8rem;
+}
+.container .growth {
+  grid-area: growth;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+.container .growth h1 {
+  font-size: 4rem;
+}
+.container .growth h3 {
+  font-weight: 400;
+}
+.container .followers {
+  grid-area: follower;
+  background: hsl(256, 67%, 59%);
+  color: white;
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  align-items: center;
+}
+.container .followers h1 {
+  font-size: 2.2rem;
+}
+.container .followers img {
+  height: 12rem;
+}
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .container .left {
+    min-width: 100vw;
+  }
+  .container .left div {
+    min-width: 100%;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+    grid-template-areas: "hero" "schedule" "manage" "posting" "growth" "followers";
+  }
+}
+/* Mobile (iPhone 8 / 375px) specific adjustments */
+@media (max-width: 375px) {
+  /* make container a centered column so we can reorder items visually */
+  .container {
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+  .container .left {
+    width: 100%;
+    max-width: 360px;
+    margin: 0 auto;
+    order: 2; /* place left column after the grid */
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .container .left .create, .container .left .write {
+    padding: 1.2rem;
+    border-radius: 0.75rem;
+    width: 100%;
+  }
+  .container .left .create {
+    padding: 1.5rem;
+  }
+  .container .left .create h1 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  .container .left .create img {
+    height: 4.5rem;
+  }
+  .container .left .write {
+    padding: 0.9rem 1rem;
+  }
+  .container .left .write h1 {
+    font-size: 1.6rem;
+  }
+  .container .left .write img {
+    height: 8rem;
+  }
+  .grid {
+    order: 1; /* visual order: grid content first */
+    width: 100%;
+    max-width: 360px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    grid-template-areas: "hero" "schedule" "manage" "posting" "growth" "followers";
+    margin: 0 auto;
+  }
+  .card {
+    padding: 1rem;
+    border-radius: 0.75rem;
+  }
+  /* larger hero section at the top to match mockup */
+  .hero {
+    padding: 1.4rem;
+    border-radius: 0.75rem;
+  }
+  .hero h1 {
+    font-size: 2.4rem;
+    line-height: 2.6rem;
+  }
+  .hero h4 {
+    font-size: 0.95rem;
+  }
+  .hero img {
+    height: 2rem;
+  }
+  .schedule {
+    padding: 1rem;
+  }
+  .schedule img {
+    height: 9rem;
+    margin: 1rem 0;
+  }
+  .schedule h2 {
+    font-size: 1rem;
+  }
+  .manage {
+    padding: 1rem;
+  }
+  .manage h1 {
+    font-size: 1.05rem;
+  }
+  .manage img {
+    height: 3.5rem;
+  }
+  .posting {
+    padding: 1rem;
+  }
+  .posting h2 {
+    font-size: 1.2rem;
+  }
+  .posting img {
+    height: 6.5rem;
+  }
+  .growth {
+    padding: 1rem;
+  }
+  .growth h1 {
+    font-size: 2rem;
+  }
+  .growth img {
+    max-width: 100%;
+    height: auto;
+  }
+  .followers {
+    padding: 1rem;
+  }
+  .followers h1 {
+    font-size: 1.2rem;
+  }
+  .followers img {
+    height: 7.5rem;
+  }
+  /* Ensure images don't overflow small screens */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+}/*# sourceMappingURL=style.this.css.map */
