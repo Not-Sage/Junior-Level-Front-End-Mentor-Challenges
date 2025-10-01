@@ -11,6 +11,7 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.this.css" />
     <link rel="stylesheet" href="bg.css" />
 
@@ -37,7 +38,7 @@
   1000 GB -->
 
     <div class="container">
-      <div class="iconContainer">
+      <div class="iconContainer" data-aos="flip-up" data-aos-duration="800">
         <img src="images/logo.svg" alt="" />
         <div class="icons">
           <div class="icon"><img src="images/icon-document.svg" alt="" /></div>
@@ -47,9 +48,9 @@
       </div>
       <div class="rightContainer">
         <div class="blank">
-          <div class="bubble"><span class="big">185</span> GB LEFT</div>
+          <div class="bubble" data-aos="zoom-in" data-aos-duration="1000"><span class="big">185</span> GB LEFT</div>
         </div>
-        <div class="dataContainer">
+        <div class="dataContainer" data-aos="flip-down" data-aos-duration="1000">
           <h3>You’ve used <span>815 GB</span> of your storage</h3>
           <div class="bar">
             <div class="line">
@@ -70,5 +71,9 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/not-sage">Sage</a>.
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+  AOS.init();
+</script>
   </body>
 </html>
