@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+    <title>Frontend Mentor | News homepage</title>
+    <link rel="stylesheet" href="dist/css/style.this.css" />
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Home
+  New
+  Popular
+  Trending
+  Categories
+
+  The Bright Future of Web 3.0?
+
+  We dive into the next evolution of the web that claims to put the power of the platforms back into the hands of the people. 
+  But is it really fulfilling its promise?
+
+  Read more
+
+  New 
+
+  Hydrogen VS Electric Cars
+  Will hydrogen-fueled cars ever catch up to EVs?
+
+  The Downsides of AI Artistry
+  What are the possible adverse effects of on-demand AI image generation?
+
+  Is VC Funding Drying Up?
+  Private funding by VC firms is down 50% YOY. We take a look at what that means.
+
+  01
+  Reviving Retro PCs
+  What happens when old PCs are given modern upgrades?
+
+  02
+  Top 10 Laptops of 2022
+  Our best picks for various needs and budgets.
+
+  03
+  The Growth of Gaming
+  How the pandemic has sparked fresh opportunities. -->
+
+    <header class="head">
+      <div class="logo">
+        <img
+          src="/assets/images/logo.svg"
+          alt=""
+          data-aos="fade-right"
+          data-aos-duration="500"
+        />
+      </div>
+      <img
+        src="/assets/images/icon-menu.svg"
+        alt=""
+        class="menu"
+        onclick="toggleMobileNav()"
+      />
+      <div class="navelements">
+        <ul>
+          <li data-aos="fade-down" data-aos-duration="500">Home</li>
+          <li data-aos="fade-down" data-aos-duration="600">New</li>
+          <li data-aos="fade-down" data-aos-duration="800">Popular</li>
+          <li data-aos="fade-down" data-aos-duration="900">Trending</li>
+          <li data-aos="fade-down" data-aos-duration="1000">Categories</li>
+        </ul>
+      </div>
+    </header>
+
+    <div id="mobile-nav" class="mobile-nav hidden">
+      <button class="close-btn" onclick="toggleMobileNav()">✕</button>
+      <ul>
+        <li><a href="#">Collections</a></li>
+        <li><a href="#">Men</a></li>
+        <li><a href="#">Women</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+
+    <main class="main">
+      <div class="main1">
+        <div class="img" data-aos="zoom-in" data-aos-duration="500"></div>
+        <div class="imgdata">
+          <div class="imgdataheading imgdataelements">
+            <h1 data-aos="fade-right" data-aos-duration="700">
+              The Bright Future of Web 3.0?
+            </h1>
+          </div>
+          <div class="imgdatacontent imgdataelements">
+            <p data-aos="flip-up" data-aos-duration="800">
+              We dive into the next evolution of the web that claims to put the
+              power of the platforms back into the hands of the people. But is
+              it really fulfilling its promise?
+            </p>
+            <button data-aos="zoom-out" data-aos-duration="800">
+              Read More
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="main2" data-aos="fade-left" data-aos-duration="600">
+        <h1>New</h1>
+
+        <div class="data">
+          <h2>Hydrogen VS Electric Cars</h2>
+          <p>Will hydrogen-fueled cars ever catch up to EVs?</p>
+        </div>
+
+        <hr />
+
+        <div class="data">
+          <h2>The Downsides of AI Artistry</h2>
+          <p>
+            What are the possible adverse effects of on-demand AI image
+            generation?
+          </p>
+        </div>
+
+        <hr />
+
+        <div class="data">
+          <h2>Is VC Funding Drying Up?</h2>
+          <p>
+            Private funding by VC firms is down 50% YOY. We take a look at what
+            that means.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="foot">
+      <div class="footdata" data-aos="fade-up" data-aos-duration="800">
+        <img src="/assets/images/image-retro-pcs.jpg" alt="" />
+
+        <div class="footdatacontent">
+          <h2>01</h2>
+          <h3>Reviving Retro PCs</h3>
+          <p>What happens when old PCs are given modern upgrades?</p>
+        </div>
+      </div>
+
+      <div class="footdata" data-aos="fade-up" data-aos-duration="900">
+        <img src="/assets/images/image-top-laptops.jpg" alt="" />
+
+        <div class="footdatacontent" >
+          <h2>02</h2>
+          <h3>Top 10 Laptops of 2022</h3>
+          <p>Our best picks for various needs and budgets.</p>
+        </div>
+      </div>
+
+      <div class="footdata" data-aos="fade-up"
+          data-aos-duration="1000">
+        <img src="/assets/images/image-gaming-growth.jpg" alt="" />
+
+        <div
+          class="footdatacontent"
+          
+        >
+          <h2>03</h2>
+          <h3>The Growth of Gaming</h3>
+          <p>How the pandemic has sparked fresh opportunities.</p>
+        </div>
+      </div>
+    </footer>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/Not-Sage">Sage</a>.
+    </div>
+
+    <script>
+      function toggleMobileNav() {
+        const nav = document.getElementById("mobile-nav");
+        nav.classList.toggle("active");
+      }
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>
