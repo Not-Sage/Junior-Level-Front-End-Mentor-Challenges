@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+body {
+  padding: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.head {
+  display: flex;
+  min-height: 6rem;
+  align-items: center;
+}
+.head .logo {
+  flex-grow: 2;
+  cursor: pointer;
+}
+.head .navelements {
+  flex-grow: 1;
+}
+.head .navelements ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+}
+.head .navelements ul li {
+  color: hsl(236, 13%, 42%);
+  cursor: pointer;
+}
+.head .menu {
+  display: none;
+}
+
+.main {
+  display: flex;
+  min-height: 35rem;
+  gap: 2rem;
+  margin: 2rem 0 6rem 0;
+}
+.main .main1 {
+  max-width: 70%;
+  display: flex;
+  flex-direction: column;
+}
+.main .main1 .img {
+  height: 50%;
+  width: 100%;
+  background-image: url("/assets/images/image-web-3-desktop.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.main .main1 .imgdata {
+  display: flex;
+  width: 100%;
+  height: 50%;
+  gap: 1rem;
+}
+.main .main1 .imgdata .imgdataheading {
+  width: 50%;
+  font-size: 1.8rem;
+  padding: 3rem 0;
+}
+.main .main1 .imgdata .imgdatacontent {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.main .main1 .imgdata .imgdatacontent p {
+  font-size: 1.3rem;
+  line-height: 2rem;
+  color: hsl(236, 13%, 42%);
+  padding-top: 2rem;
+}
+.main .main1 .imgdata .imgdatacontent button {
+  max-width: 40%;
+  padding: 1rem 0;
+  background-color: hsl(5, 85%, 63%);
+  border: none;
+  color: #000;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.2rem;
+}
+.main .main2 {
+  background-color: hsl(240, 100%, 5%);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 1rem;
+}
+.main .main2 h1 {
+  color: hsl(35, 77%, 62%);
+}
+.main .main2 .data {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.main .main2 .data h2 {
+  color: white;
+  font-size: 1.1rem;
+}
+.main .main2 .data p {
+  color: hsl(233, 8%, 79%);
+  font-size: 1rem;
+}
+.main .main2 hr {
+  color: hsl(236, 13%, 42%);
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+.foot .footdata {
+  max-width: 33%;
+  height: auto;
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.foot .footdata img {
+  height: 8rem;
+}
+.foot .footdata .footdatacontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.foot .footdata .footdatacontent h2 {
+  color: hsl(5, 85%, 63%);
+}
+.foot .footdata .footdatacontent p {
+  color: hsl(236, 13%, 42%);
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 70%;
+  height: 100%;
+  background-color: white;
+  z-index: 999;
+  padding: 2rem 1.5rem;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.mobile-nav li {
+  margin-bottom: 1.2rem;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Toggle class */
+.mobile-nav.active {
+  transform: translateX(0%);
+}
+
+/* Mobile menu icon (hamburger) */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 746px) {
+  html {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  body {
+    padding: 0;
+    margin: 0 10px;
+    max-width: 300px;
+  }
+  .navelements {
+    display: none;
+  }
+  .head {
+    height: auto;
+    width: 100%;
+  }
+  .menu {
+    display: block !important;
+    z-index: 100;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  .main {
+    flex-direction: column;
+    width: 100%;
+  }
+  .main .main1, .main .main2 {
+    width: 100%;
+  }
+  .main .main1 {
+    max-width: 300px;
+  }
+  .main .main1 .img {
+    min-height: 200px;
+    width: 300px;
+  }
+  .imgdata {
+    flex-direction: column;
+    width: 100%;
+    min-width: 310px;
+    gap: 0 !important;
+  }
+  .imgdata h1 {
+    width: 90%;
+    font-size: 2.5rem;
+  }
+  .imgdataheading {
+    min-width: 100%;
+    padding: 1rem 0rem !important;
+  }
+  .imgdatacontent p {
+    width: 90vw;
+    padding: 1rem 0 !important;
+  }
+  .imgdatacontent button {
+    min-width: 8rem;
+  }
+  .main2 {
+    min-height: 100vh;
+  }
+  .foot {
+    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .footdata {
+    margin: 1rem 0;
+    width: 100%;
+  }
+  .footdatacontent h2, .footdatacontent h3, .footdatacontent p {
+    width: 50Vw;
+  }
+}/*# sourceMappingURL=style.this.css.map */
