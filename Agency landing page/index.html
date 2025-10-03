@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="dist/css/style.this.css" />
+    <title>Frontend Mentor | Sunnyside agency landing page</title>
+  </head>
+  <body>
+    <!-- About
+  Services
+  Projects
+  Contact
+
+  We are creatives
+
+  Transform your brand
+
+  We are a full-service creative agency specializing in helping brands grow fast. 
+  Engage your clients through compelling visuals that do most of the marketing for you.
+
+  Learn more
+
+  Stand out to the right audience
+
+  Using a collaborative formula of designers, researchers, photographers, videographers, and copywriters, we’ll build and extend your brand in digital places. 
+
+  Learn more
+
+  Graphic design
+  Great design makes you memorable. We deliver artwork that underscores your brand message and captures potential clients’ attention.
+
+  Photography
+  Increase your credibility by getting the most stunning, high-quality photos that improve your business image.
+
+  Client testimonials
+
+  We put our trust in Sunnyside and they delivered, making sure our needs were met and deadlines were always hit.
+  Emily R.
+  Marketing Director
+
+  Sunnyside’s enthusiasm coupled with their keen interest in our brand’s success made it a satisfying and enjoyable experience.
+  Thomas S.
+  Chief Operating Officer
+
+  Incredible end result! Our sales increased over 400% when we worked with Sunnyside. Highly recommended!
+  Jennie F.
+  Business Owner
+
+  About
+  Services
+  Projects
+  Contact -->
+
+    <!-- ----------Ye Header section he------ -->
+    <header class="head">
+      <div class="nav">
+        <div class="logo">
+          <img src="/images/logo.svg" alt="" />
+        </div>
+
+        <img
+          src="/images/icon-hamburger.svg"
+          alt=""
+          class="menu"
+          onclick="toggleMobileNav()"
+        />
+
+        <div class="navelements">
+          <ul>
+            <li>About</li>
+            <li>Services</li>
+            <li>Projects</li>
+            <li class="contact">Contact</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="center">
+        <h1>We are Creatives</h1>
+        <img src="images/icon-arrow-down.svg" alt="" />
+      </div>
+      <!-- Bg Img Add in this. -->
+
+      <div id="mobile-nav" class="mobile-nav hidden">
+        <button class="close-btn" onclick="toggleMobileNav()">✕</button>
+        <ul>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+          <li class="contact">Contact</li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- ---------------Ye main section-------------- -->
+    <main class="main">
+      <div class="firstmain mains">
+        <!-- 1st One Here  ----------------------------------------------------------------------------->
+        <div class="mainelements maindata">
+          <h2>Transform your brand</h2>
+          <p>
+            We are a full-service creative agency specializing in helping brands
+            grow fast. Engage your clients through compelling visuals that do
+            most of the marketing for you.
+          </p>
+          <div class="learn">Learn More</div>
+          <div class="line"></div>
+        </div>
+
+        <!-- 2nd Here ----------------------------------------------------------------------------->
+        <div class="mainelements img transform">
+          <!-- <img src="images/desktop/image-transform.jpg" alt="" /> -->
+        </div>
+      </div>
+
+      <div class="secondmain">
+        <!-- 3rd Here ----------------------------------------------------------------------------->
+        <div class="mainelements img stand">
+          <!-- <img src="images/desktop/image-stand-out.jpg" alt="" /> -->
+        </div>
+
+        <!-- 4th Here ----------------------------------------------------------------------------->
+        <div class="mainelements maindata">
+          <h2>Stand out to the right audiance</h2>
+          <p>
+            Using a collaborative formula of designers, researchers,
+            photographers, videographers, and copywriters, we’ll build and
+            extend your brand in digital places.
+          </p>
+          <div class="learn">Learn More</div>
+          <div class="line2"></div>
+        </div>
+      </div>
+
+      <div class="thirdmain">
+        <!-- 5th Here ----------------------------------------------------------------------------->
+        <div class="thirdmain1">
+          <div>
+            <h2>Graphic Design</h2>
+            <p>
+              Great design makes you memorable. We deliver artwork that
+              underscores your brand message and captures potential clients’
+              attention.
+            </p>
+          </div>
+        </div>
+
+        <!-- 6th Here ----------------------------------------------------------------------------->
+        <div class="thirdmain2">
+          <div>
+            <h2>Photography</h2>
+            <p>
+              Increase your credibility by getting the most stunning,
+              high-quality photos that improve your business image.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- -----------------Ye client section he--------------------- -->
+    <section class="clients">
+      <h2>Client Testimonials</h2>
+
+      <div class="client">
+        <!-- 1st Client Here -->
+        <div class="clientreviews">
+          <div class="img"><img src="images/image-emily.jpg" alt="" /></div>
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div class="clientdata">
+            <h3>Emily R.</h3>
+            <h4>Marketing Director</h4>
+          </div>
+        </div>
+
+        <!-- 2nd Client Here -->
+        <div class="clientreviews">
+          <div class="img"><img src="images/image-thomas.jpg" alt="" /></div>
+          <p>
+            Sunnyside’s enthusiasm coupled with their keen interest in our
+            brand’s success made it a satisfying and enjoyable experience.
+          </p>
+          <div class="clientdata">
+            <h3>Thomson S.</h3>
+            <h4>Cheif Operating Officer</h4>
+          </div>
+        </div>
+
+        <!-- 3rd Client here -->
+        <div class="clientreviews">
+          <div class="img"><img src="images/image-jennie.jpg" alt="" /></div>
+          <p>
+            We put our trust in Sunnyside and they delivered, making sure our
+            needs were met and deadlines were always hit.
+          </p>
+          <div class="clientdata">
+            <h3>Jennie F.</h3>
+            <h4>Business Owner</h4>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ---------------------------Ye image section he--------------------------- -->
+
+    <section class="images">
+      <img src="images/desktop/image-gallery-milkbottles.jpg" alt="" />
+      <img src="images/desktop/image-gallery-orange.jpg" alt="" />
+      <img src="images/desktop/image-gallery-cone.jpg" alt="" />
+      <img src="images/desktop/image-gallery-sugarcubes.jpg" alt="" />
+    </section>
+
+    <!-- ----------------------------------Ye Footer He-------------------------------------- -->
+
+    <footer class="foot">
+      <h2>sunnyside</h2>
+      <div class="footnav">
+        <ul>
+          <li>About</li>
+          <li>Services</li>
+          <li>Projects</li>
+        </ul>
+      </div>
+      <div class="contacts">
+        <img src="images/icon-facebook.svg" alt="" />
+        <img src="images/icon-instagram.svg" alt="" />
+        <img src="images/icon-twitter.svg" alt="" />
+        <img src="images/icon-pinterest.svg" alt="" />
+      </div>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="https://github.com/Not-Sage">Sage</a>.
+      </div>
+    </footer>
+    <script>
+      function toggleMobileNav() {
+        const nav = document.getElementById("mobile-nav");
+        nav.classList.toggle("active");
+      }
+    </script>
+  </body>
+</html>
