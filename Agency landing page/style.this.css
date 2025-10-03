@@ -1,0 +1,516 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.menu {
+  display: none;
+}
+
+.mobile-nav {
+  position: fixed;
+  top: 8rem;
+  left: 0;
+  width: 320px; /* Full width from top */
+  height: 300px; /* Adjust height as needed */
+  background-color: white;
+  z-index: 999;
+  padding: 2rem 1.5rem;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transform: translateY(-200%); /* Start above the screen */
+  opacity: 0; /* Start invisible */
+  transition: transform 0.4s ease-out, opacity 0.4s ease-out;
+}
+
+/* When active */
+.mobile-nav.active {
+  transform: translateY(0); /* Slide down to original position */
+  opacity: 1; /* Fade in */
+}
+
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.mobile-nav li {
+  margin-bottom: 1.2rem;
+  list-style: none;
+  color: black;
+  font-family: Barlow, sans-serif;
+  font-weight: 500;
+}
+
+.mobile-nav a {
+  text-decoration: none;
+  color: #1d1d1d;
+  font-weight: 700;
+  font-size: 1.2rem;
+  font-family: "Kumbh Sans", sans-serif;
+}
+
+/* Close button */
+.close-btn {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Toggle class */
+.mobile-nav.active {
+  transform: translateX(0%);
+}
+
+/* Mobile menu icon (hamburger) */
+.mobile-menu-icon {
+  display: none;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.contact {
+  color: hsl(213, 9%, 39%);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  background-color: hsl(51, 100%, 50%);
+  padding: 0.9rem 1rem;
+  border-radius: 2rem;
+  font-family: Fraunces, sans-serif;
+  font-weight: 700;
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+.contact:hover {
+  background-color: #6fcfff;
+  color: white;
+}
+
+.head {
+  height: 100vh;
+  width: auto;
+  background-image: url("../../images/desktop/image-header.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.head .nav {
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 2rem;
+}
+.head .nav .logo {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+}
+.head .nav .logo img {
+  height: 2rem;
+}
+.head .nav .navelements {
+  flex-grow: 1;
+}
+.head .nav .navelements ul {
+  display: flex;
+  justify-content: flex-end;
+  gap: 3rem;
+  align-items: center;
+}
+.head .nav .navelements ul li {
+  list-style: none;
+  color: hsl(0, 100%, 100%);
+  font-family: Barlow, sans-serif;
+  font-weight: 500;
+}
+.head .nav .navelements ul .contact {
+  color: hsl(213, 9%, 39%);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  background-color: white;
+  padding: 0.9rem 1rem;
+  border-radius: 2rem;
+  font-family: Fraunces, sans-serif;
+  font-weight: 700;
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+.head .nav .navelements ul .contact:hover {
+  background-color: #6fcfff;
+  color: white;
+}
+.head .center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 6rem;
+}
+.head .center h1 {
+  font-size: 3.8rem;
+  text-transform: uppercase;
+  color: white;
+  font-family: Fraunces;
+  word-spacing: 1rem;
+  letter-spacing: 0.5rem;
+  font-weight: 1000;
+  margin-top: 10vh;
+}
+
+.main {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .learn {
+  color: hsl(212, 27%, 19%);
+  font-family: Fraunces, sans-serif;
+  font-weight: 1000;
+  text-transform: uppercase;
+}
+.main .line, .main .line2 {
+  height: 8px;
+  width: 120px;
+  border-radius: 4px;
+  background-color: hsla(51, 100%, 50%, 0.438);
+  transform: translateY(-52px);
+  z-index: 1;
+  transition: 0.5s all ease;
+  cursor: pointer;
+}
+.main .line:hover, .main .line2:hover {
+  background-color: hsl(51, 100%, 50%) !important;
+}
+.main .line2 {
+  background-color: hsla(7, 99%, 70%, 0.411);
+}
+.main .line2:hover {
+  background-color: hsl(7, 99%, 70%) !important;
+}
+.main .mains {
+  width: 100%;
+  height: auto;
+}
+.main .firstmain, .main .secondmain {
+  display: flex;
+  width: 100%;
+}
+.main .transform, .main .stand {
+  background-image: url("../../images/desktop/image-transform.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  flex-grow: 1;
+  width: 50%;
+  height: 50vw;
+  max-height: 600px;
+}
+.main .stand {
+  background-image: url("../../images/desktop/image-stand-out.jpg");
+}
+.main .maindata {
+  display: flex;
+  width: 50%;
+  flex-grow: 1;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0 8rem;
+  gap: 3rem;
+}
+.main .maindata h2 {
+  font-size: 3rem;
+  font-family: Fraunces, sans-serif;
+  font-weight: 1000;
+  color: hsl(212, 27%, 19%);
+}
+.main .maindata p {
+  font-family: Barlow, sans-serif;
+  color: hsl(213, 9%, 39%);
+  font-weight: 500;
+  font-size: 1.2rem;
+}
+.main .thirdmain {
+  display: flex;
+  height: 50vw;
+  max-height: 600px;
+  width: 100%;
+}
+.main .thirdmain .thirdmain1, .main .thirdmain .thirdmain2 {
+  max-width: 720px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 0 12rem;
+  padding-bottom: 6rem;
+  text-align: center;
+}
+.main .thirdmain .thirdmain1 div h2, .main .thirdmain .thirdmain2 div h2 {
+  font-family: Fraunces, sans-serif;
+  padding: 1rem 0;
+  color: hsl(167, 40%, 24%);
+  font-weight: 1000;
+}
+.main .thirdmain .thirdmain1 div p, .main .thirdmain .thirdmain2 div p {
+  font-family: Barlow, sans-serif;
+  color: hsl(167, 40%, 24%);
+  font-weight: 500;
+}
+.main .thirdmain .thirdmain1 {
+  background-image: url("../../images/desktop/image-graphic-design.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.main .thirdmain .thirdmain2 {
+  background-image: url("../../images/desktop/image-photography.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.clients {
+  height: 100vh;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8rem 0;
+  gap: 1rem;
+}
+.clients h2 {
+  font-family: Fraunces, sans-serif;
+  text-transform: uppercase;
+  color: hsl(210, 4%, 67%);
+  letter-spacing: 0.4rem;
+  word-spacing: 0.1rem;
+  font-size: 1.2rem;
+  font-weight: 1000;
+}
+.clients .client {
+  margin-top: 2rem;
+  width: 80%;
+  height: 100%;
+  display: flex;
+  gap: 3rem;
+}
+.clients .client .clientreviews {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: space-around;
+}
+.clients .client .clientreviews img {
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+}
+.clients .client .clientreviews p {
+  font-family: Barlow, sans-serif;
+  font-weight: 500;
+  line-height: 1.8rem;
+  color: hsl(213, 9%, 39%);
+  font-size: 1.2rem;
+}
+.clients .client .clientreviews div h3 {
+  font-family: Fraunces, sans-serif;
+  color: hsl(212, 27%, 19%);
+  margin: 1rem 0;
+  font-weight: 1000;
+}
+.clients .client .clientreviews div h4 {
+  font-family: Barlow, sans-serif;
+  font-weight: 400;
+  color: hsl(210, 4%, 67%);
+}
+
+.images {
+  height: auto;
+  display: flex;
+}
+.images img {
+  width: 25%;
+}
+
+.foot {
+  height: 50vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 2rem 0;
+  align-items: center;
+  background-color: #90d4c5;
+}
+.foot h2 {
+  font-size: 2.4rem;
+  font-family: Barlow, sans-serif;
+  color: hsl(167, 40%, 24%);
+  font-weight: 1000;
+}
+.foot .footnav ul {
+  display: flex;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  align-items: center;
+}
+.foot .footnav ul li {
+  list-style: none;
+  font-size: 1.2rem;
+  font-family: Barlow, sans-serif;
+  color: hsl(167, 34%, 41%);
+  font-weight: 500;
+  transition: 0.75s all ease-in-out;
+  cursor: pointer;
+}
+.foot .footnav ul li:hover {
+  color: white;
+}
+.foot .contacts {
+  display: flex;
+  gap: 2rem;
+}
+.foot .contacts img {
+  transition: 0.25s all ease-in-out;
+  cursor: pointer;
+}
+.foot .contacts img:hover {
+  color: white;
+  scale: 1.1;
+}
+
+@media screen and (max-width: 746px) {
+  .menu {
+    display: block !important;
+  }
+  .main, .clients, .images, .foot {
+    display: none;
+    padding: 0;
+    margin: 0;
+  }
+  .head .navelements {
+    display: none;
+  }
+  .head .nav {
+    width: 100%;
+  }
+  .head .nav .logo {
+    height: 2rem;
+  }
+  .head .nav .logo img {
+    height: 1.2rem;
+  }
+  .head .center {
+    width: 100vw;
+    text-align: center;
+    gap: 2rem;
+  }
+  .head .center h1 {
+    font-size: 2rem;
+  }
+  .head .center img {
+    height: 6rem;
+    padding: 0;
+  }
+  h2, p {
+    padding: 0;
+    margin: 0;
+  }
+  .main {
+    max-width: 320px !important;
+    display: block;
+    height: 200vh;
+  }
+  .main .firstmain, .main .secondmain, .main .thirdmain {
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+  }
+  .main .maindata {
+    align-items: center;
+    width: 100%;
+    padding: 2rem 2rem;
+    text-align: center;
+    order: 2;
+  }
+  .main .maindata h2 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  .main .transform {
+    width: 100% !important;
+    min-height: 100vw;
+  }
+  .main .stand {
+    width: 100% !important;
+    min-height: 100vw;
+    order: 1;
+  }
+  .main .thirdmain {
+    min-width: 100%;
+  }
+  .main .thirdmain1, .main .thirdmain2 {
+    padding: 0 !important;
+    margin: 0 !important;
+    min-height: 80vh;
+    width: 100% !important;
+  }
+  .main .thirdmain1 div, .main .thirdmain2 div {
+    padding-bottom: 2rem;
+  }
+  .clients {
+    display: block;
+    height: 150vh !important;
+    width: 100% !important;
+    margin-top: 88rem;
+    align-items: center;
+    margin-bottom: 2rem;
+  }
+  .clients h2 {
+    font-size: 1.2rem;
+  }
+  .clients .client {
+    flex-direction: column;
+    width: 100% !important;
+    padding: 0 1rem;
+  }
+  .clients .client .clientreviews {
+    gap: 2rem;
+  }
+  .images {
+    display: block;
+    display: flex;
+    flex-wrap: wrap;
+    min-width: 100% !important;
+    min-height: 100vw !important;
+  }
+  .images img {
+    flex: 2 2 50%;
+  }
+  .foot {
+    display: block;
+    height: 50vh;
+    width: 100%;
+    text-align: center;
+    align-items: center !important;
+    gap: 4rem !important;
+  }
+  .foot h2 {
+    padding: 2rem 0 !important;
+  }
+  .foot .footnav {
+    align-items: center;
+  }
+  .foot .footnav ul {
+    align-items: center !important;
+    gap: 2rem !important;
+    margin-left: 1.4rem;
+  }
+  .foot .contacts {
+    margin-left: 4rem;
+  }
+}/*# sourceMappingURL=style.this.css.map */
