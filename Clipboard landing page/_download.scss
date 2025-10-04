@@ -1,0 +1,67 @@
+.download{
+    min-height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    h2{
+        font-size: 2rem;
+        font-weight: 600;
+        color: $Gray-700;
+    }
+    p{
+        font-weight: 400;
+        color: $Gray-500;
+        padding: 0 22rem;
+        text-align: center;
+        line-height: 1.8;
+    }
+    .btn{
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            padding: 1rem 0;
+            button{
+                padding: 1rem 2.2rem;
+                border-radius: 2rem;
+                font-size: 1rem;
+                border: none;
+                color: white;
+                font-weight: 600;
+                letter-spacing: 0.1rem;
+                box-shadow: 0 2px 4px 1px #333;
+                cursor: pointer;
+                transition: 0.25s all ease-in-out;
+                &:hover{
+                    background-color: #5dccbb;
+                }
+            }
+            .btios{
+                background-color: $Green-500;
+                box-shadow: 0 2px 4px 1px hsl(171, 67%, 26%);
+            }
+            .btmac{
+                background-color: $Blue-100;
+                box-shadow: 0 2px 4px 1px hsl(233, 46%, 38%);
+                &:hover{
+                    background-color: #8896ff;
+                }
+            }
+        }
+    @media screen and (max-width: 346px) {
+        min-height: 100vh;
+        h2{
+            font-size: 1.8rem;
+            text-align: center;
+        }
+        p{
+            font-size: 1rem;
+            padding: 0 1rem;
+        }
+        .btn{
+            flex-direction: column;
+            width: 80%;
+        }
+    }
+}

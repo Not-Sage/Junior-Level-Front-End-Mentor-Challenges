@@ -1,0 +1,419 @@
+@import url("https://fonts.googleapis.com/css2?family=Bai+Jamjuree:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Bai Jamjuree", sans-serif;
+}
+
+.head {
+  width: 100%;
+  min-height: 120vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  padding: 6rem 0;
+  padding-bottom: 4rem;
+  background-image: url("images/bg-header-desktop.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.head .logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1.8rem;
+}
+.head .headdata {
+  width: 50vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.head .headdata h1 {
+  font-size: 2.6rem;
+  color: hsl(210, 10%, 33%);
+  font-weight: 600;
+}
+.head .headdata p {
+  font-size: 1.2rem;
+  padding: 0 1rem;
+  line-height: 1.5;
+  color: hsl(201, 11%, 66%);
+}
+.head .headdata .btn {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.head .headdata .btn button {
+  padding: 1rem 2.2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 2px 4px 1px #333;
+  cursor: pointer;
+  transition: 0.25s all ease-in-out;
+}
+.head .headdata .btn button:hover {
+  background-color: #5dccbb;
+}
+.head .headdata .btn .btios {
+  background-color: hsl(171, 66%, 44%);
+  box-shadow: 0 2px 4px 1px hsl(171, 67%, 26%);
+}
+.head .headdata .btn .btmac {
+  background-color: hsl(233, 100%, 69%);
+  box-shadow: 0 2px 4px 1px hsl(233, 46%, 38%);
+}
+.head .headdata .btn .btmac:hover {
+  background-color: #8896ff;
+}
+.head .lastdata {
+  margin-top: 8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  padding: 3rem 3rem;
+  width: 62vw;
+  text-align: center;
+}
+.head .lastdata h2 {
+  font-size: 2.2rem;
+  color: hsl(210, 10%, 33%);
+  font-weight: 600;
+}
+.head .lastdata p {
+  line-height: 1.5;
+  font-size: 1.2rem;
+  color: hsl(201, 11%, 66%);
+  font-weight: 400;
+}
+@media screen and (max-width: 346px) {
+  .head {
+    min-height: 120vh;
+  }
+  .head .headdata {
+    margin-top: 1.8rem;
+    padding: 0 1rem;
+  }
+  .head .headdata h1 {
+    font-size: 2rem;
+  }
+  .head .headdata p {
+    font-size: 1rem;
+  }
+  .head .logo, .head .headdata, .head .lastdata {
+    width: 100vw;
+  }
+  .head .btn {
+    flex-direction: column;
+  }
+}
+
+.monitor {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+}
+.monitor .iosmoni {
+  width: 50%;
+}
+.monitor .iosmoni img {
+  width: 100%;
+}
+.monitor .monidata {
+  width: 50%;
+  padding: 4rem 14rem 4rem 6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.8rem;
+}
+.monitor .monidata .monisubdata {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.monitor .monidata .monisubdata h2 {
+  font-weight: 600;
+  color: hsl(210, 10%, 33%);
+}
+.monitor .monidata .monisubdata p {
+  line-height: 1.6;
+  color: hsl(201, 11%, 66%);
+}
+@media screen and (max-width: 346px) {
+  .monitor {
+    flex-direction: column;
+    align-items: center;
+  }
+  .monitor .iosmoni {
+    width: 90%;
+    height: auto;
+    align-items: center;
+  }
+  .monitor .iosmoni img {
+    margin: 0 auto;
+  }
+  .monitor .monidata {
+    width: 100%;
+    padding: 1rem 2rem;
+    gap: 1rem;
+    text-align: center;
+  }
+}
+
+.tablet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 4rem;
+  text-align: center;
+}
+.tablet .tabdata {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.tablet .tabdata h2 {
+  font-size: 2rem;
+  font-family: 600;
+  color: hsl(210, 10%, 33%);
+}
+.tablet .tabdata p {
+  font-weight: 400;
+  color: hsl(201, 11%, 66%);
+}
+@media screen and (max-width: 346px) {
+  .tablet {
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    gap: 5rem;
+  }
+  .tablet .tabdata {
+    width: 100%;
+  }
+  .tablet .tabimg img {
+    width: 90vw;
+  }
+}
+
+.tools {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 3rem;
+}
+.tools .toolhead {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.tools .toolhead h2 {
+  font-size: 2rem;
+  color: hsl(210, 10%, 33%);
+  font-weight: 600;
+}
+.tools .toolhead p {
+  color: hsl(201, 11%, 66%);
+  font-weight: 400;
+}
+.tools .maintools {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 2rem;
+}
+.tools .maintools .maintool {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 25%;
+  justify-content: center;
+}
+.tools .maintools .maintool h3 {
+  font-weight: 600;
+  color: hsl(210, 10%, 33%);
+  font-size: 1.4rem;
+}
+.tools .maintools .maintool p {
+  color: hsl(201, 11%, 66%);
+  line-height: 1.8;
+}
+.tools .companys {
+  padding: 8rem 0;
+  padding-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 6rem;
+  width: 100%;
+}
+.tools .companys img {
+  height: 100%;
+  width: auto;
+}
+@media screen and (max-width: 346px) {
+  .tools {
+    gap: 1rem;
+  }
+  .tools .maintools {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tools .maintools .maintool {
+    width: 90%;
+  }
+  .tools .companys {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tools .companys img {
+    width: 40%;
+  }
+  .tools .toolhead p {
+    padding: 0 1rem;
+  }
+}
+
+.download {
+  min-height: 50vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.download h2 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: hsl(210, 10%, 33%);
+}
+.download p {
+  font-weight: 400;
+  color: hsl(201, 11%, 66%);
+  padding: 0 22rem;
+  text-align: center;
+  line-height: 1.8;
+}
+.download .btn {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  padding: 1rem 0;
+}
+.download .btn button {
+  padding: 1rem 2.2rem;
+  border-radius: 2rem;
+  font-size: 1rem;
+  border: none;
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  box-shadow: 0 2px 4px 1px #333;
+  cursor: pointer;
+  transition: 0.25s all ease-in-out;
+}
+.download .btn button:hover {
+  background-color: #5dccbb;
+}
+.download .btn .btios {
+  background-color: hsl(171, 66%, 44%);
+  box-shadow: 0 2px 4px 1px hsl(171, 67%, 26%);
+}
+.download .btn .btmac {
+  background-color: hsl(233, 100%, 69%);
+  box-shadow: 0 2px 4px 1px hsl(233, 46%, 38%);
+}
+.download .btn .btmac:hover {
+  background-color: #8896ff;
+}
+@media screen and (max-width: 346px) {
+  .download {
+    min-height: 100vh;
+  }
+  .download h2 {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+  .download p {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+  .download .btn {
+    flex-direction: column;
+    width: 80%;
+  }
+}
+
+.foot {
+  min-height: 20vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8rem;
+  background-color: #f5f6f8;
+}
+.foot .footlogo {
+  height: 8vh;
+}
+.foot .footlogo img {
+  height: 100%;
+}
+.foot .contact {
+  display: flex;
+  width: 40vw;
+  gap: 4rem;
+}
+.foot .contact div ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+.foot .contact div ul li {
+  list-style: none;
+  color: hsl(201, 11%, 66%);
+  cursor: pointer;
+  transition: 0.25s all ease-in-out;
+}
+.foot .contact div ul li:hover {
+  color: hsl(171, 66%, 44%);
+}
+.foot .links {
+  display: flex;
+  gap: 1rem;
+}
+.foot .links img {
+  color: gold;
+}
+@media screen and (max-width: 346px) {
+  .foot {
+    min-height: 40vh;
+    padding: 2rem 0;
+    flex-direction: column;
+    gap: 4rem;
+  }
+  .foot .contact {
+    flex-direction: column;
+    gap: 2rem;
+  }
+  .foot .contact div ul {
+    gap: 2rem;
+  }
+  .foot .contact div ul li {
+    text-align: center;
+    color: hsl(210, 10%, 33%);
+  }
+}

@@ -1,0 +1,49 @@
+.monitor{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    .iosmoni{
+        width: 50%;
+        img{
+            width: 100%;
+        }
+    }
+    .monidata{
+        width: 50%;
+        padding: 4rem 14rem 4rem 6rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.8rem;
+        .monisubdata{
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            h2{
+                font-weight: 600;
+                color: $Gray-700;
+            }
+            p{
+                line-height: 1.6;
+                color: $Gray-500;
+            }
+        }
+    }
+    @media screen and (max-width: 346px){
+        flex-direction: column;
+        align-items: center;
+        .iosmoni{
+            width: 90%;
+            height: auto;
+            align-items: center;
+            img{
+                margin: 0 auto;
+            }
+        }
+        .monidata{
+            width: 100%;
+            padding: 1rem 2rem;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
+}

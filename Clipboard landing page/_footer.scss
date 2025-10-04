@@ -1,0 +1,63 @@
+.foot{
+    min-height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8rem;
+    background-color: #f5f6f8;
+    .footlogo{
+        height: 8vh;
+        img{
+            height: 100%;
+        }
+    }
+    .contact{
+        display: flex;
+        width: 40vw;
+        gap: 4rem;
+        div{
+
+            ul{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                gap: 1rem;
+                li{
+                    list-style: none;
+                    color: $Gray-500;
+                    cursor: pointer;
+                    transition: 0.25s all ease-in-out;
+                    &:hover{
+                        color: $Green-500;
+                    }
+                }
+            }
+        }
+    }
+    .links{
+        display: flex;
+        gap: 1rem;
+        img{
+            color: gold;
+        }
+    }
+    @media screen and (max-width: 346px) {
+        min-height: 40vh;
+        padding: 2rem 0;
+        flex-direction: column;
+        gap: 4rem;
+        .contact{
+            flex-direction: column;
+            gap: 2rem;
+            div{
+                ul{
+                    gap: 2rem;
+                    li{
+                        text-align: center;
+                        color: $Gray-700;
+                    }
+                }
+            }
+        }
+    }
+}
