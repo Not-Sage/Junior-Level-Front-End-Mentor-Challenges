@@ -1,0 +1,23 @@
+$Navy-850 : hsl(217, 28%, 15%);
+$Navy-900 : hsl(218, 28%, 13%);
+$Navy-950 : hsl(216, 53%, 9%);
+$Navy-800 : hsl(219, 30%, 18%);
+$Teal-200 : hsl(176, 68%, 64%);
+$Cyan-500 : hsl(198, 60%, 50%);
+$Red-500 : hsl(0, 100%, 63%);
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+$font-family1: "Open Sans", sans-serif;
+$font-family2: "Raleway", sans-serif;
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-family1;
+}
+body{
+    // background-color: #181e2a;
+    background-image: url("images/bg-curvy-desktop.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}

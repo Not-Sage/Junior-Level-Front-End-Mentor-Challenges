@@ -1,0 +1,87 @@
+.access{
+    max-width: 60%;
+    background-color: #1c2230;
+    min-height: 40vh;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 2rem;
+    transform: translateY(8rem);
+    border-radius: 0.4rem;
+    box-shadow: 2px 2px 2px 2px #07111d;
+    h2{
+        font-weight: 700;
+        color: white;
+        font-family: $font-family2;
+        font-size: 2rem;
+    }
+    p{
+        color: rgb(210, 210, 210);
+        font-size: 0.8rem;
+        padding: 0 4rem;
+    }
+    .email{
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+        max-height: 4rem;
+        input{
+            padding: 1rem 16rem 1rem 2rem;
+            border-radius: 2rem;
+            border: none;
+            text-align: left;
+            color: rgb(210, 210, 210);
+        }
+        p{
+            position: static;
+            bottom: 0;
+            left: 0;
+        }
+        .error{
+            color: red;
+        }
+        .noerror{
+            color: white;
+        }
+        button{
+            border-radius: 2rem;
+            border: none;
+            padding: 1rem 2rem;
+            color: white;
+            background-color: $Cyan-500;
+            font-weight: 700;
+            transition: 0.25s all ease-in-out;
+            &:hover{
+                background-color: #8cdae4;
+            } 
+        }
+    }
+    @media screen and (max-width: 346px) {
+        // display: none;
+        max-width: 90%;
+        height: auto;
+        padding: 2rem;
+        h2{
+            font-size: 1rem;
+        }
+        p{
+            padding: 0;
+
+        }
+        .email{
+            flex-direction: column;
+            gap: 0.6rem;
+            input{
+                padding: 0.6rem 2rem;
+                margin: 0;
+            }
+            button{
+                padding: 0.6rem 2rem;
+                margin: 0;
+            }
+        }
+    }
+}

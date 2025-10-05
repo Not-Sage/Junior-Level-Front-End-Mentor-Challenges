@@ -1,0 +1,103 @@
+.reviews{
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8rem;
+    background-color: #181e2a;
+    gap: 2rem;
+    .logo{
+        position: relative;
+        top: -6.2rem;
+        left: 4.6rem;
+        text-align: left;
+        border-radius: 0;
+        scale: 1.2;
+        z-index: 0;
+        img{
+            border-radius: 0;
+        }
+    }
+    .review{
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        padding: 2rem 2rem;
+        background-color: #21293c;
+        border-radius: 0.25rem;
+        z-index: 2;
+        h4{
+            color: rgb(210, 210, 210);
+            font-size: 0.8rem;
+            font-weight: 400;
+            line-height: 1.5;
+        }
+        .client{
+            max-height: 2rem;
+            display: flex;
+            align-items: center;
+            .clientimg{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .clientinfo{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                h5{
+                    color: rgb(241, 241, 241);
+                    font-size: 0.6rem;
+                }
+                h6{
+                    color: rgb(210, 210, 210);
+                    font-size: 0.5rem;
+                }
+            }
+        }
+    }
+    img{
+        // display: none;
+        height: 1.8rem;
+        border-radius: 50%;
+        margin-right: 0.6rem;
+    }
+    @media screen and (max-width: 346px) {
+        .logo{
+        position: relative;
+        top: 1.6rem;
+        left: -7rem;
+        text-align: left;
+        border-radius: 0;
+        scale: 1.2;
+        z-index: 0;
+        img{
+            scale: 0.5;
+            border-radius: 0;
+        }
+    }
+        padding: 1rem 2rem;
+        gap: 1rem;
+        flex-direction: column;
+        .review{
+            padding: 1rem 1rem;
+            .client{
+                .clientimg{
+                    max-height: 1rem;
+                    img{
+                        height: 1.2rem;
+                    }
+                }
+                .clientinfo{
+                    h6{
+                        font-size: 0.4rem;
+                        color: rgb(210, 210, 210);
+                    }
+                }
+            }
+            h4{
+                font-size: 0.6rem;
+            }
+        }
+    }
+}
