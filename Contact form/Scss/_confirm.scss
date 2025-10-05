@@ -1,0 +1,20 @@
+.confirm{
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    .confirmtick{
+        height: 1rem;
+        width: 1rem;
+        border: 1px solid $grey-900;
+        cursor: pointer;
+    }
+}
+
+.tickit2{
+    background-image: url("./assets/images/icon-success-check.svg");
+    background-size: cover;
+    background-position: center;
+    background-color: $green-600;
+    border: none;
+    border-radius: 50%;
+}

@@ -1,0 +1,42 @@
+.query{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    div{
+        display: flex;
+    }
+    .checkbox{
+        gap: 1rem;
+    }
+    .firstcheckbox, .secondcheckbox{
+        padding: 1rem 0;
+        width: 50%;
+        border-radius: 0.6rem;
+        border: 1px solid $grey-900;
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+        padding-left: 1rem;
+        div{
+            height: 1rem;
+            width: 1rem;
+            border: 1px solid $grey-900;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        h3{
+            color: $grey-900;
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+    }   
+}
+
+.changebg{
+    background-color: #e0f1e7;
+}
+.tickit1{
+    background-image: url("./assets/images/icon-checkbox-check.svg");
+    background-position: center;
+    background-size: cover;
+}

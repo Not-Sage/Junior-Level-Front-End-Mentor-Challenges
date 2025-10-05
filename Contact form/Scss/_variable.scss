@@ -1,0 +1,47 @@
+// Primary Colors
+$green-200: hsl(148, 38%, 91%);
+$green-600: hsl(169, 82%, 27%);
+$red: hsl(0, 66%, 54%);
+
+// Neutral Colors
+$white: hsl(0, 0%, 100%);
+$grey-500: hsl(186, 15%, 59%);
+$grey-900: hsl(187, 24%, 22%);
+$font-family: "Karla", sans-serif;
+
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+body{
+    background-color: $green-200;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: $font-family;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+span{
+    color: $green-600;
+}
+h4{
+    color: $grey-900;
+    font-weight: 500;
+    }
+input{
+    width: 100%;
+    padding: 1rem 0;
+    border-radius: 0.4rem;
+    border: 1px solid $grey-900;
+    padding-left: 1rem !important;
+    font-size: 1.1rem;
+    &:focus-visible{
+    outline: 1px solid $green-600;
+    border: none !important;
+    }
+}
+.er{
+    color: $red;
+}

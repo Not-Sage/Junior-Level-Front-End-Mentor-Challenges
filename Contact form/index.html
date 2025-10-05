@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+    <title>Frontend Mentor | Contact form</title>
+    <link rel="stylesheet" href="style.thisis.css" />
+  </head>
+
+  <body>
+    <section class="form">
+      <h1>Contact Us</h1>
+
+      <div class="name">
+        <div class="firstname">
+          <h4>First Name <span>*</span></h4>
+          <input type="text" class="firstnameinput" />
+          <p class="nameerror er"></p>
+        </div>
+        <div class="lastname">
+          <h4>Last Name <span>*</span></h4>
+          <input type="text" class="lastnameinput" />
+          <p class="error er"></p>
+        </div>
+      </div>
+
+      <div class="email">
+        <h4>Email Name <span>*</span></h4>
+        <input type="text" class="emailinput" />
+        <p class="emailerror er"></p>
+      </div>
+
+      <div class="query">
+        <h4>Query Enquiry <span>*</span></h4>
+        <div class="checkbox">
+          <div class="firstcheckbox">
+            <div class="check"></div>
+            <h3>General Enquiry</h3>
+          </div>
+          <div class="secondcheckbox">
+            <div class="check"></div>
+            <h3>Support Request</h3>
+          </div>
+        </div>
+        <p class="queryerror er"></p>
+      </div>
+
+      <div class="message">
+        <h4>Message <span>*</span></h4>
+        <input type="text" class="messageinput" />
+        <p class="messageerror er"></p>
+      </div>
+
+      <div class="confirm">
+        <div class="confirmtick"></div>
+        <div class="confirminfo">
+          <p>I consent to being contacted by the team <span>*</span></p>
+          <p class="confirmerror er"></p>
+        </div>
+      </div>
+
+      <button class="submit">Submit</button>
+    </section>
+
+    <div class="success">
+      <div class="send">
+        <img src="assets/images/icon-success-check.svg" alt="" />
+        <h5>Message Send!</h5>
+      </div>
+      <p>Thanks for completing the form. We'll be in touch soon!</p>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>.
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
